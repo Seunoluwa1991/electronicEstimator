@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/js/bootstrap.js">
+    <!-- <style>
+        .myform{
+
+        }
+    </style> -->
+
+
+</head>
+
+<body>
+    <div class=" container d-flex  justify-content-center mt-5 ">
+
+        <div class="border border-1 border-primary col-6 rounded mt-5 ms-5 shadow ">
+            
+            <h1 class="text-center text-danger ">ELECTRONICS PRICE ESTIAMTOR</h1>
+        <form id="market-price"  class=" myform mx-3">
+            <!-- <div class="myform mx-3"> -->
+
+                <label for="">Product Name</label>
+                <input id="productName" class="form-control" type="text" placeholder="SmartPhones" required><br>
+
+            <label for="brand">Brand</label>
+            <input id="brand" class="form-control" type="text" placeholder="Tecno" required><br>
+
+            <label for="model">Model</label>
+            <input id="model" class="form-control" type="text" placeholder="TecnoP55 " required><br>
+
+            <label for="condition">Device Condition</label>
+            <select id="condition" class="form-control" required>
+                <option value="" disabled selected>Choose Device Condition</option>
+                <option value="New device">New Device</option>
+                <option value="Fairly Used">Fairy Used</option>
+                <option value="Refurbished">Refurbished</option>
+            </select><br>
+
+            <label for="electronicsAge">Electronics Age</label>
+            <input id="electronicsAge" class="form-control" type="number" min="0" required><br>
+
+            <label for="originalPrice">Original Price</label>
+            <input class="form-control" type="text" id="originalPrice" required><br>
+            
+            <div class="d-flex justify-content-center">
+                <button class="btn btn-primary col-6  mb-3" id="submit">Submit</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+
+    <!-- Display information -->
+
+    <div id="estimatedPrice">
+
+
+    </div>
+</body>
+
+
+<script type="module" src="index.js">
+    
+</script>
+
+</html>
