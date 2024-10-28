@@ -39,8 +39,7 @@ const submit = document.getElementById("submit").addEventListener('click', funct
 
     let originalPrice = parseFloat(originalPriceName);
     let age = parseInt(electronicsAge);
-    const displayestimatedPrice = document.getElementById("estimatedPrice");
-
+    
     // estimate Price
 
       let estimatedPrice= estimatePrice(originalPrice, age, conditionName)
@@ -71,17 +70,6 @@ const submit = document.getElementById("submit").addEventListener('click', funct
         estimatedValue(estimatedPrice);
 })
 
-//     onValue(ref(database, "priceEstimator/" + productName), (snapshot)=>{
-//         if (snapshot.exists()){
-//             const estimatedInfo = snapshot.val()
-//             console.log(estimatedInfo)
-//             estimatedValue(estimatedInfo)
-//         } else{
-//             console.log('Error message: No data Available' )
-//         }
-
-//     }
-// );
 
 function estimatePrice(originalPrice, age, condition){
     let depreciationRate = 0.1;
@@ -109,7 +97,7 @@ function estimatedValue(estimatedPrice){
     document.getElementById('estimatedPrice').innerHTML =`
     <div class='container shadow border border-2 border-primary mt-5 p-5'>
 
-            <h1 class="text-center">Estimated Price: $${estimatedPrice} </h1>
+            <h1 class="text-center">Estimated Price: $${estimatedPrice.toFixed(2)} </h1>
 
     </div>
     
